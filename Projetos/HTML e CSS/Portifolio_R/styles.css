@@ -1,0 +1,239 @@
+*{
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+/* INICIO HEADER */
+
+.nav{
+  background-color: #181818;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  position: sticky;
+  top: 0;
+  z-index: 9;
+}
+.nav-list{
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin-right: 28px;
+}
+.nav-list a{
+  text-decoration: none;
+  color: #ddd;
+  padding: 20px;
+}
+.nav-list a:hover{
+  color: #fff;
+  font-size: 18px;
+}
+
+/* FIM HEADER*/
+
+/* INICIO MAIN*/
+
+.main{
+  background-image: url(images/programador.png);
+  width: 100%;
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  padding-left: 10%;
+}
+.main h1{
+  font-size: 54px;
+  color: #fff;
+}
+.main p{
+  color: #1e96fc;
+  font-style: italic;
+  font-size: 24px;
+  margin-top: 10px;
+  margin-bottom: 35px;
+}
+.call-to-action{
+  background-color: #DDD;
+  border: none;
+  border-radius: 4px;
+  padding: 14px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.9s;
+}
+.main a{
+  color: #181818;
+  text-decoration: none;
+}
+.call-to-action:hover{
+  transform: scale(1.1);
+}
+
+/* FIM MAIN*/
+
+/* INICIO SOBRE*/
+
+.sobre{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 80px 10%;
+  background-color: #fff;
+  width: 100%;
+}
+.sobre div{
+  max-width: 50%;
+  padding-right: 40px;
+}
+.sobre img{
+  max-width: 450px;
+  border-radius: 8px;
+}
+.sobre div h2{
+  font-size: 32px;
+  margin-bottom: 14px;
+}
+
+/* FIM SOBRE*/
+
+/* INICIO PROJECTS*/
+
+.projects{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0;
+}
+.projects h2{
+  font-size: 32px;
+  margin-bottom: 8px;
+  margin-top: 20px;
+}
+.projects p{
+  margin-bottom: 40px;
+  font-style: italic;
+}
+.projects-list{
+  width: 100%;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projects img{
+  width: 25%;
+  margin: 0 0.5%;
+  opacity: 0.8;
+  transition: 0.7s;
+  border-radius: 8px;
+
+}
+.projects img:hover{
+  opacity: 1;
+}
+.action-orcamento{
+  background-color: #181818;
+  border: 0;
+  border-radius: 8px;
+  padding: 12px 28px;
+  font-size: 18px;
+  color: #fff;
+  margin-top: 18px;
+  cursor: pointer;
+  transition: 0.7s;
+}
+.action-orcamento:hover{
+  transform: scale(1.1);
+}
+
+/* FIM PROJECTS*/
+
+/* INICIO FOOTER*/
+
+footer{
+  width: 100%;
+  background-color: #181818;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+footer a{
+  text-decoration: none;
+  color: #fff;
+}
+footer p{
+  margin-left: 12px;
+}
+
+/* FIM FOOTER*/
+
+/* RESPONSIVIDADE*/
+
+@media (max-width: 1050px){
+  .main h1{
+    font-size: 40px;
+  }
+  .main p{
+    font-size: 18px;
+  }
+  .main{
+    background-size: cover;
+  }
+  .call-to-action{
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .sobre{
+    flex-direction: column;
+    padding-top: 80px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+  .sobre div{
+    max-width: 80%;
+  }
+  .sobre div h2{
+    font-size: 45px;
+  }
+  .sobre img{
+    width: 80%;
+    margin-top: 30px;
+  }
+
+  .projects img{
+    width: 30%;
+  }
+  .action-orcamento{
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+
+  footer{
+    flex-direction: column;
+  }
+  footer h3{
+    font-size: 24px;
+  }
+  footer p{
+    margin: 0;
+    margin-top: 8px;
+  }
+}

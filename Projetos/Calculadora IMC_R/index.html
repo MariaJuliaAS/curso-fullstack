@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora de IMC</title>
+</head>
+<body>
+    <main>
+        <section>
+            <h2>Calcule seu IMC.</h2>
+
+            <details>
+                <summary>Informações</summary>
+
+                <table>
+                    <tr>
+                        <th>Classificação</th>
+                        <th>IMC</th>
+                    </tr>
+                    <tr>
+                        <td>Muito abaixo do peso</td>
+                        <td>Abaixo de 17</td>
+                    </tr>
+                    <tr>
+                        <td>Abaixo do peso</td>
+                        <td>17 - 18,49</td>
+                    </tr>
+                    <tr>
+                        <td>Peso ideal</td>
+                        <td>18,50 - 24,99</td>
+                    </tr>
+                    <tr>
+                        <td>Sobrepeso</td>
+                        <td>	25 - 29,99</td>
+                    </tr>
+                    <tr>
+                        <td>Obesidade</td>
+                        <td>Maior ou igual a 30</td>
+                    </tr>
+                </table>
+            </details>
+
+            <div class="input">
+                <form onsubmit="return Calcular(event)">
+                    <label for="peso">Digite seu peso:</label>
+                    <input type="text" name="peso" id="peso" required placeholder="Exemplo: 65">
+
+                    <label for="altura">Digite sua altura:</label>
+                    <input type="text" name="altura" id="altura" required placeholder="Exemplo: 1.70">
+
+                    <input type="submit" value="Calcular IMC" id="calc">
+                </form>
+            </div>
+
+            <div id="resultado"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
