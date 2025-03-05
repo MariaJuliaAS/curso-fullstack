@@ -1,0 +1,21 @@
+/*Estilização de lista---*/
+.lista h2{ 
+    text-align: center;
+}
+.lista ul{
+    padding: 0;
+    list-style: none; /*tira a bolinha da lista*/
+    text-align: center;
+}
+.lista li{
+    margin-bottom: 8px;
+}
+.lista a{
+    text-decoration: none;
+    color: #000000;
+}
+.lista a:hover{ /*:hover (estilizar para quando passar o mouse por cima)*/
+    color: blue;
+    text-transform: uppercase;
+}
+/*---*/

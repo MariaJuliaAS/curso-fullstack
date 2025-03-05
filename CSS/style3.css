@@ -1,0 +1,14 @@
+/*Box Model---*/
+.container{
+    background-color: #121212;
+    color: #fff;
+    width: 700px;
+
+/*Faz parte do box model---*/
+    margin: auto;
+    padding: 40px;
+    border: 5px solid green;
+/*---*/
+    border-radius: 20px; 
+}
+/*---*/

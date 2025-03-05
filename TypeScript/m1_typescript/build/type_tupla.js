@@ -1,0 +1,11 @@
+"use strict";
+let aluno;
+aluno = ['Sujeito Programador', 123];
+aluno.push('Mj', 19);
+console.log(aluno);
+let statusPedido;
+statusPedido = ['Em produção', 'Saiu para entrega', 'Pedido entregue'];
+console.log(statusPedido);
+let lista;
+lista = [19, true, 'Maju'];
+console.log(lista);
