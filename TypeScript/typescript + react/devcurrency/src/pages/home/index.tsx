@@ -3,7 +3,11 @@ import { BsSearch } from 'react-icons/bs'
 import { Link, useNavigate } from 'react-router-dom'
 import { FormEvent, useState, useEffect } from 'react'
 
+<<<<<<< HEAD
 export interface CoinProps {
+=======
+interface CoinProps {
+>>>>>>> 687945b1610ef0450a5dcfa5b3d1206f1dcded95
     id: string;
     name: string;
     symbol: string;
@@ -16,9 +20,12 @@ export interface CoinProps {
     marketCapUsd: string;
     volumeUsd24Hr: string;
     explorer: string;
+<<<<<<< HEAD
     formatedPrice?: string;
     formatedMarket?: string;
     formatedVolume?: string
+=======
+>>>>>>> 687945b1610ef0450a5dcfa5b3d1206f1dcded95
 }
 
 interface DataProps {
@@ -28,6 +35,7 @@ interface DataProps {
 export function Home() {
     const [input, setInput] = useState('');
     const [coins, setCoins] = useState<CoinProps[]>([])
+<<<<<<< HEAD
     const [offset, setOffset] = useState(0)
     const navigate = useNavigate();
     const [loading, setLoading] = useState(true)
@@ -38,6 +46,16 @@ export function Home() {
 
     async function getData() {
         fetch(`https://api.coincap.io/v2/assets?limit=10&offset=${offset}`)
+=======
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        getData();
+    }, [])
+
+    async function getData() {
+        fetch('https://api.coincap.io/v2/assets?limit=10&offset=0')
+>>>>>>> 687945b1610ef0450a5dcfa5b3d1206f1dcded95
             .then(response => response.json())
             .then((data: DataProps) => {
                 const coinsData = data.data;
@@ -47,26 +65,37 @@ export function Home() {
                     currency: 'USD'
                 });
 
+<<<<<<< HEAD
                 const priceCompact = Intl.NumberFormat('en-US', { //Intl - biblioteca de internacionalização
                     style: 'currency',
                     currency: 'USD',
                     notation: 'compact'
                 });
 
+=======
+>>>>>>> 687945b1610ef0450a5dcfa5b3d1206f1dcded95
                 const formatedResult = coinsData.map((item) => {
                     const formated = {
                         ...item,
                         formatedPrice: price.format(Number(item.priceUsd)),
+<<<<<<< HEAD
                         formatedMarket: priceCompact.format(Number(item.marketCapUsd)),
                         formatedVolume: priceCompact.format(Number(item.volumeUsd24Hr))
+=======
+                        
+>>>>>>> 687945b1610ef0450a5dcfa5b3d1206f1dcded95
                     }
                     return formated;
                 });
 
+<<<<<<< HEAD
                 const listCoins = [...coins, ...formatedResult]
                 setCoins(listCoins)
                 setLoading(false)
 
+=======
+                console.log(formatedResult)
+>>>>>>> 687945b1610ef0450a5dcfa5b3d1206f1dcded95
             })
 
     }
@@ -80,6 +109,7 @@ export function Home() {
     }
 
     function handleGetMore() {
+<<<<<<< HEAD
         if (offset === 0) {
             setOffset(10)
             return
@@ -94,6 +124,9 @@ export function Home() {
                 <h1>Carregando...</h1>
             </div>
         )
+=======
+        alert('ok')
+>>>>>>> 687945b1610ef0450a5dcfa5b3d1206f1dcded95
     }
 
     return (
@@ -122,6 +155,7 @@ export function Home() {
                 </thead>
 
                 <tbody id='tbody'>
+<<<<<<< HEAD
                     {coins.length > 0 && coins.map((item) => (
                         <tr className={styles.tr} key={item.id}>
                             <td className={styles.tdLabel} data-label='Moeda'>
@@ -156,6 +190,33 @@ export function Home() {
                             </td>
                         </tr>
                     ))}
+=======
+                    <tr className={styles.tr}>
+                        <td className={styles.tdLabel} data-label='Moeda'>
+                            <div className={styles.name}>
+                                <Link to={'/detail/bitcoin'}>
+                                    <span>Bitcoin</span> | BTC
+                                </Link>
+                            </div>
+                        </td>
+
+                        <td className={styles.tdLabel} data-label='Valor mercado'>
+                            1T
+                        </td>
+
+                        <td className={styles.tdLabel} data-label='Preço'>
+                            8.000
+                        </td>
+
+                        <td className={styles.tdLabel} data-label='Volume'>
+                            2B
+                        </td>
+
+                        <td className={styles.tdLoss} data-label='Mudança 24h'>
+                            <span>1.20</span>
+                        </td>
+                    </tr>
+>>>>>>> 687945b1610ef0450a5dcfa5b3d1206f1dcded95
                 </tbody>
             </table>
 

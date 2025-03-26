@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { CoinProps } from "../home";
@@ -101,6 +102,13 @@ export function Detail() {
                     <span className={Number(coin?.changePercent24Hr) > 0 ? styles.tdProfit : styles.tdLoss}>{Number(coin?.changePercent24Hr).toFixed(3)}</span>
                 </a>
             </section>
+=======
+export function Detail() {
+
+    return (
+        <div>
+            <h1>Detalhe</h1>
+>>>>>>> 687945b1610ef0450a5dcfa5b3d1206f1dcded95
         </div>
     )
 }

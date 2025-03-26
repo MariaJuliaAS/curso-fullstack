@@ -84,6 +84,7 @@ table td {
     font-size: 16px;
 }
 
+<<<<<<< HEAD
 .logo{
     width: 20px;
     height: 20px;
@@ -119,6 +120,11 @@ table td {
     .name img{
         margin-left: 14px;
     }
+=======
+/* Responsividade tabela */
+
+@media screen and (max-width: 600px) {
+>>>>>>> 687945b1610ef0450a5dcfa5b3d1206f1dcded95
     table {
         border: 0;
     }

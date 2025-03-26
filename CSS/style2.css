@@ -1,0 +1,21 @@
+/*Cores---*/
+.nome{
+    background-color: aquamarine;
+}
+.rgb{
+    background-color: rgb(241, 23, 150);
+}
+.rgba{
+    background-color: rgba(98, 186, 61, 0.3);
+}
+.hex{
+    background-color: #965d47;
+    color: #40c; /*mesmo que #4400cc*/
+}
+.hsl{
+    background-color: hsl(78, 84%, 76%);
+}
+.hsla{
+    background-color: hsla(228, 47%, 50%, 0.2);
+}
+/*---*/

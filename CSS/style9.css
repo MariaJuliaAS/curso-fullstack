@@ -1,0 +1,57 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+body{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+  height: 180vh;
+}
+
+.container{
+  background-color: #121212;
+  height: 500px;
+  margin: 50px;
+
+  /*Ativando felx box*/
+  display: flex;
+  flex-direction: column; /*mudou a direção da direita pra esquerda em linha*/
+  justify-content: end; /*é aplicado no pai que tem  o display flex*/
+
+  align-items: center; /*vai mexer no eixo vertical (coluna) quando estiver em row, se estiver
+  em column vai mexer na horizontal (linha)(o justify tambem inverte)*/
+}
+
+.area{
+  width: 100px;
+  height: 100px;
+  font-size: 25px;
+  /*flex-basis: 400px;todos os itens vao ter o valor definido como tamanho*/
+}
+
+.item1{
+  background-color: red;
+  /*flex: 1; para usar o flex tem que ativar o display flex no pai (so pode usar o flex no filho)*/
+  /*flex-shrink: 1;*/
+  /*order: 3; muda a ordem (so funciona para os itens filhos que tem display flex no pai)*/
+  align-self: center;
+}
+
+.item2{
+  background-color: blue;
+  /*flex: 1;*/
+  /*flex-shrink: 1;*/
+  /*order: 1;*/
+  align-self: flex-start;/*para mudar apenas um*/
+}
+
+.item3{
+  background-color: green;
+  /*flex: 1;*/
+  /*flex-shrink: 2;se o os outros shrink tem 1 e esse 2, quando o usuario deixar a tela menor
+  que 400px o item3 vai diminuir em duas vezes*/
+  /*order: 2;*/
+  align-self: flex-end;
+}

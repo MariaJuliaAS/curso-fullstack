@@ -1,0 +1,20 @@
+body{
+    height: 200vh;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    /*margin, paddin, outrline 0 para tirar todas as configurações padrão que já vem (reset)*/
+}
+header{
+    background-color: cadetblue;
+    width: 100%;
+    position: sticky;
+    top: 0;
+}  
+a{
+    position: absolute;
+    bottom: 0px;
+}

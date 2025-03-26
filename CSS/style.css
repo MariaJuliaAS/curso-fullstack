@@ -1,0 +1,21 @@
+body{
+  height: 200vh;
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  /*margin, paddin, outrline 0 para tirar todas as configurações padrão que já vem (reset)*/
+}
+/*Seletores CLASS e ID---*/
+.primeiroh1 {
+  color: red;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+#segundoh1 {
+  color: violet;
+  font-family: 'Pixelify Sans', sans-serif;
+}
+/*---*/
+
